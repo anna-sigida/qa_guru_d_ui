@@ -3,8 +3,8 @@
 
 - [Используемый стек](#computer-используемый-стек)
 - [Запуск автотестов](#arrow_forward-запуск-автотестов)
-- [Пример Allure-отчета](#-пример-allure-отчета)
-- [Уведомления в Telegram](#-уведомления-в-telegram)
+- [Пример Allure-отчета](#arrow_forward-пример-отчета-allure)
+- [Уведомления в Telegram](#Уведомления-в-Telegram)
 
 
 ## :computer: Используемый стек
@@ -34,6 +34,7 @@ gradle clean test -Denv=remote - удаленно через Selenoid
 gradle clean test -Denv=local - локально у себя на устройстве
 ```
 
+## :arrow_forward: Пример отчета Allure
 
 ### Результат выполнения автотеста
 
