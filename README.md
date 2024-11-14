@@ -39,8 +39,8 @@ gradle clean test -Denv=local - локально у себя на устройс
 ### Результат выполнения автотеста
 
 <p align="center">
-<img title="Test Results in Alure TestOps" src="images/allure1.png">
-<img title="Test Results in Alure TestOps" src="images/allure2.png">
+<img title="Test Results in Allure" src="images/allure1.png">
+<img title="Test Results in Allure" src="images/allure2.png">
 </p>
 
 
