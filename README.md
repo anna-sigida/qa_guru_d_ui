@@ -11,14 +11,14 @@
 ## :computer: Используемый стек
 
 <p align="center"> 
-<img title="Test Results in Allure" src="images/icons/java.svg" width="50" height="50" alt="Java">  
-<img title="Test Results in Allure" src="images/icons/selenide.svg" width="50" height="50" alt="Selenide"> 
-<img title="Test Results in Allure" src="images/icons/selenoid.svg" width="50" height="50" alt="Selenoid"> 
-<img title="Test Results in Allure" src="images/icons/allure.svg" width="50" height="50" alt=" Allure Report">
-<img title="Test Results in Allure" src="images/icons/gradle.svg" width="50" height="50" alt="Gradle"> 
-<img title="Test Results in Allure" src="images/icons/junit5.svg" width="50" height="50" alt="JUnit5"> 
-<img title="Test Results in Allure" src="images/icons/jenkins.svg" width="50" height="50" alt="Jenkins"> 
-<img title="Test Results in Allure" src="images/icons/telegram_logo.svg" width="50" height="50" alt="Telegram"> 
+<img src="images/icons/java.svg" width="50" height="50" alt="Java">  
+<img src="images/icons/selenide.svg" width="50" height="50" alt="Selenide"> 
+<img src="images/icons/selenoid.svg" width="50" height="50" alt="Selenoid"> 
+<img src="images/icons/allure.svg" width="50" height="50" alt=" Allure Report">
+<img src="images/icons/gradle.svg" width="50" height="50" alt="Gradle"> 
+<img src="images/icons/junit5.svg" width="50" height="50" alt="JUnit5"> 
+<img src="images/icons/jenkins.svg" width="50" height="50" alt="Jenkins"> 
+<img src="images/icons/telegram_logo.svg" width="50" height="50" alt="Telegram"> 
 
 </p>
 
