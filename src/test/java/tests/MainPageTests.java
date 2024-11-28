@@ -5,9 +5,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.switchTo;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class MainPageTests extends BaseTest {
@@ -43,8 +45,8 @@ public class MainPageTests extends BaseTest {
     @DisplayName("Проверка отображения заголовка в меню Проектов")
     void checkProjectsTest() {
         mainPage.clickProjects();
-        projectPage.
-                projectTitle
+        projectPage
+                .checkProjectTitle()
                 .shouldBe(visible);
     }
 
@@ -53,7 +55,7 @@ public class MainPageTests extends BaseTest {
     void checkContactTest() {
         mainPage.clickContact();
         contactPage
-                .contactButton
+                .checkButton()
                 .shouldBe(visible);
     }
 
@@ -62,7 +64,7 @@ public class MainPageTests extends BaseTest {
     void checkSolutionsTest() {
         mainPage.clickSolutions();
         solutionPage
-                .demoButton
+                .checkButton()
                 .shouldBe(visible);
     }
 
@@ -71,9 +73,35 @@ public class MainPageTests extends BaseTest {
     void checkBlogTest() {
         mainPage.clickBlog();
         blogPage
-                .title
+                .checkTitle()
                 .scrollIntoView(true)
                 .shouldBe(visible);
-        assertThat(blogPage.cards).isNotNull();
+        assertThat(blogPage.checkCards()).isNotNull();
+    }
+
+    @Test
+    @DisplayName("Проверка перехода на страницу Публикации через поиск")
+    void checkBlogSearchTest() {
+        String query = "Публикации";
+
+        mainPage.openSearch();
+        mainPage.fillSearch(query);
+        mainPage.getSearchResults().shouldHave(sizeGreaterThan(10));
+        mainPage.clickOnFirstResult();
+        switchTo().window(1);
+
+        blogPage
+                .checkTitle()
+                .scrollIntoView(true)
+                .shouldBe(visible);
+    }
+
+    @Test
+    @DisplayName("Проверка смены языка сайта")
+    void checkLocalizationTest() {
+        mainPage.clickOnEn();
+        mainPage.checkEnLocalization();
+        mainPage.clickOnRu();
+        mainPage.checkRuLocalization();
     }
 }

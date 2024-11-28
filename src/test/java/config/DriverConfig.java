@@ -6,14 +6,12 @@ import org.aeonbits.owner.ConfigFactory;
 
 public class DriverConfig {
 
-    private static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
+    private static final ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
     public static void configWebDriver() {
 
-        if (config.remoteUrl() != null) {
-            Configuration.remote = config.remoteUrl();
-            Configuration.pageLoadStrategy = "eager";
-        }
+        Configuration.remote = config.remoteUrl();
+        Configuration.pageLoadStrategy = "eager";
 
         switch (config.getBrowser()) {
             case CHROME: {

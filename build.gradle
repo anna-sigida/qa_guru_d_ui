@@ -14,8 +14,7 @@ def aspectjWeaverVersion = "1.9.22",
     allureVersion = "2.21.0",
     junitVersion = "5.10.0",
     slf4jVersion = "2.0.7",
-    appiumVersion = "8.3.0",
-    ownerVersion = "1.0.4"
+    ownerVersion = "1.0.12"
 
 allure {
     report {
@@ -37,7 +36,6 @@ dependencies {
             "org.aspectj:aspectjweaver:$aspectjWeaverVersion",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.appium:java-client:$appiumVersion",
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
@@ -45,8 +43,6 @@ dependencies {
             'org.assertj:assertj-core:3.26.3',
             "commons-io:commons-io:2.11.0"
     )
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
